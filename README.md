@@ -1,6 +1,6 @@
 # Bluespec Codex Environment
 
-This repository provides a simple setup script for building the open-source
+This repository provides a simple setup script for installing the open-source
 Bluespec toolchain (BSC) in an environment that Codex can use for
 building and testing Bluespec SystemVerilog (BSV) code.
 
@@ -13,7 +13,7 @@ building and testing Bluespec SystemVerilog (BSV) code.
 
 ## Quick Start
 
-Run the setup script to install all dependencies and build BSC:
+Run the setup script to download the latest binary release and install BSC:
 
 ```bash
 ./scripts/setup_bsc.sh
@@ -21,11 +21,12 @@ Run the setup script to install all dependencies and build BSC:
 
 The script will:
 
-1. Install the packages required to build the Bluespec compiler.
-2. Clone the BSC source repository.
-3. Build the compiler and install it under `/opt/bsc`.
+1. Install the runtime packages required by the Bluespec tools.
+2. Detect your distribution and download the matching pre-built release
+   from the BSC GitHub repository.
+3. Extract the package under `/opt/bsc`.
 4. Add `/opt/bsc/bin` to your `PATH`.
-5. Run a simple smoke test (`make check-smoke`) to verify the build.
+5. Run a simple `bsc -help` command to verify the installation.
 
 After the script finishes, restart your shell or source your `.bashrc`
 so that the updated `PATH` is active.
