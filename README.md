@@ -39,4 +39,23 @@ Once installed, you can invoke `bsc` and related tools directly. Example:
 bsc -help
 ```
 
+## Example: FIFO
+
+A simple FIFO implementation is provided under `src` with a testbench in
+`test`. After installing BSC, build and run the simulation with:
+
+```bash
+bsc -p +:src -u -sim -g mkTb test/TestFifo.bsv
+bsc -sim -e mkTb -o mkTb test/mkTb.ba
+./mkTb
+```
+
+You should see output similar to:
+
+```text
+First: aa
+First after deq: bb
+Empty: 1
+```
+
 This environment is suitable for Codex automation or local development.
