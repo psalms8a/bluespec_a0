@@ -1,0 +1,11 @@
+# Generated build artifacts
+*.ba
+*.bo
+*.cxx
+*.h
+*.o
+*.so
+mkRiscVCore
+mkTb
+mkTb_RV
+model_*
