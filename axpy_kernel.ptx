@@ -1,0 +1,14 @@
+.version 8.7
+.target sm_80
+.address_size 64
+
+.visible .entry axpy_one(
+    .param .f32 a,
+    .param .f32 x,
+    .param .f32 y
+)
+{
+    .reg .f32 %f0, %f1, %f2;
+    mad.f32 %f2, %f0, %f1, %f2;
+    ret;
+}
